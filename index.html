@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API de ArcGIS para JavaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/8693b6a51f.js"></script>
+  <!--Get your own code at fontawesome.com-->
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid text-light" id="header">
+    <div class="container">
+      <h1>CCU 2019</h1>      
+      <h4>API de ArcGIS para JavaScript</h4>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- <h2>API de ArcGIS para JavaScript</h2> -->
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#map">Control Deslizante de Tiempo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#scene">Escena 3D Agua Realista</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="map" class="container tab-pane active"><br>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="timeslider-filter.html" allowfullscreen></iframe>
+        </div>
+        <a class="btn btn-dark btn-sm m-3" href="timeslider-filter.html" target="_blank">Ambliar</a>
+        <h5>Filter features with TimeSlider</h5>
+        <p>This sample demonstrates how to filter temporal data in a GeoJSONLayer using a TimeSlider widget. This can be done by creating a new FeatureFilter and updating the filter's timeExtent property by watching the changes to the TimeSlider's timeExtent.</p>
+      </div>
+      <div id="scene" class="container tab-pane fade"><br>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="visualization-realistic-water.html" allowfullscreen></iframe>
+        </div>
+        <a class="btn btn-dark btn-sm m-3" href="visualization-realistic-water.html" target="_blank">Ambliar</a>
+        <h5>Realistic water visualization in 3D</h5>
+        <p>
+          This sample shows how to visualize waterbody polygons with a realistic water surface using WaterSymbol3DLayer. To achieve a realistic look, the user can set various properties like the dominant color of the water, the strength of the wave, the direction of the waves or select the size of the water body.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center bg-dark text-light" style="margin-bottom:0">
+    <p><a class="text-light" href="mailto:desarrolladores@esri.co">
+        <i class='far'>&#xf0e0;</i> desarrolladores@esri.co
+    </a></p>
+  </div>
+</body>
+</html>
