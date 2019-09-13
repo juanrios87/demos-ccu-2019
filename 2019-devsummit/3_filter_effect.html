@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Filter and Effect</title>
+
+  <link rel="stylesheet" href="./src/3_filter_effect/application.css">
+  <link rel="stylesheet" href="./src/widgets/Indicator.css">
+  <link rel="stylesheet" href="./src/widgets/Banner.css">
+  <link rel="stylesheet" href="./src/widgets/IconButton.css">
+  <link rel="stylesheet" href="./src/widgets/ToggleIconButton.css">
+  <link rel="stylesheet" href="./src/widgets/Slider.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/light/main.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.5/build/styles/agate.min.css">
+</head>
+
+<body>
+  <div class="application light">
+    <div id="viewDiv" class="mapping" style="display: flex;"></div>
+  </div>
+
+  <div id="filterPanel" class="esri-widget application-panel">
+    <fieldset>
+      <legend>Filter by magnitude</legend>
+      <div id="magnitudeSlider" class="histogram-slider">
+        <div class="histogram"></div>
+        <div class="multithumb">
+          <div class="label-wrapper">
+            <span class="thumb-min-value">0</span>
+          </div>
+          <div class="slider-wrapper">
+            <input class="thumb-min" type="range" min="0" step=".1" max="8" value="0">
+            <input class="thumb-max" type="range" min="0" step=".1" max="8" value="8">
+          </div>
+          <div class="label-wrapper">
+            <span class="thumb-max-value">8</span>
+          </div>
+        </div>
+      </div>
+      <div class="js-code">
+        <pre><code id="filterCode" class="javascript">
+  layerView.filter = null;
+
+
+        </code></pre>
+      </div>
+      <div id="Slider"></div>
+    </fieldset>
+  </div>
+
+  <div id="effectPanel" class="esri-widget application-panel">
+    <fieldset>
+      <legend>Effect</legend>
+      <div id="depthSlider" class="histogram-slider-wrapper vertical">
+        <div class="label-wrapper">
+          <span class="thumb-min-value">0</span>
+        </div>
+        <div class="histogram-slider">
+          <div class="histogram"></div>
+          <div class="multithumb">
+            <div class="slider-wrapper">
+              <input class="thumb-min" type="range" min="0" step=".1" max="1000" value="0">
+              <input class="thumb-max" type="range" min="0" step=".1" max="1000" value="1000">
+            </div>
+          </div>
+        </div>
+        <div class="label-wrapper">
+          <span class="thumb-max-value">8</span>
+        </div>
+      </div>
+      <div class="js-code">
+        <pre><code id="effectCode" class="javascript">
+  layerView.effect = null;
+
+
+        </code></pre>
+      </div>
+      <div id="Slider"></div>
+    </fieldset>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.5/build/highlight.min.js"></script>
+  <script src="src/config.js"></script>
+  <script src="https://js.arcgis.com/4.11/dojo/dojo.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

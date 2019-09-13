@@ -1,0 +1,203 @@
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.application {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hljs {
+  font-size: 130%;
+  line-height: 120%;
+}
+
+.mapping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.application-panel {
+  padding: 10px;
+  min-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+}
+/*
+.application-panel .hljs {
+  background: black;
+} */
+
+/* .esri-widget .application-panel {
+  background-color: #242424AA;
+  backdrop-filter: blur(5px) contrast(200%);
+} */
+
+.application-panel fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.application-panel .js-code {
+  position: relative;
+}
+
+.application-panel .run-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.application-panel legend {
+  font-size: 16px;
+}
+
+.esri-widget--button.esri-widget.free-width {
+  width: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+.histogram-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.histogram-slider .histogram {
+  height: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  /* background: red; */
+
+  /* container of the bars */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.histogram-slider .histogram .bar {
+  flex-grow: 1;
+}
+
+.histogram-slider .histogram .bar .content {
+  /* margin-left: 2px;
+  margin-right: 2px; */
+  background: #69dcff;
+}
+
+/**
+ * multi thumb slider
+ */
+/* input[type=range]:focus::-webkit-slider-thumb   { outline: 1px solid #369; outline-offset: 2px; }
+input[type=range]:focus::-moz-range-thumb   { outline: 1px solid #369; outline-offset: 2px; }
+input[type=range]:focus::-ms-thumb   { outline: 3px solid #369; outline-offset: 2px; } */
+input[type="range"] {
+  display: block;
+  height: 2em;
+  margin: 0;
+  pointer-events: none;
+  width: 100%;
+}
+_:-ms-lang(x), input[type="range"] {
+  display: inline;
+  pointer-events: all;
+}
+
+input[type="range"] + input[type="range"] {
+  margin-top: -2em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+}
+
+input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+}
+
+input[type="range"]::-ms-thumb {
+  pointer-events: all;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: #999;
+  pointer-events: all;
+}
+
+input[type="range"]::-ms-thumb {
+  pointer-events: all;
+}
+
+.multithumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.label-wrapper {
+  width: 40px;
+  text-align: center;
+}
+
+.slider-wrapper {
+  flex-grow: 1;
+}
+
+fieldset {
+  padding: 12px;
+  border: none;
+}
+
+fieldset > legend {
+  padding: 12px;
+}
+
+fieldset p {
+  clear:both;
+}
+
+.histogram-slider-wrapper.vertical {
+  height: 200px;
+}
+
+.histogram-slider-wrapper.vertical .histogram-slider{
+  width: 160px;
+  height: 160px;
+  transform: rotate(90deg);
+}
+
+.histogram-slider-wrapper.vertical .histogram-slider .histogram {
+  width: 160px;
+  height: 127px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.esri-view-width-less-than-large .hljs {
+  font-size: 100%;
+  line-height: 100%;
+}
+
+.esri-view-width-less-than-large .application-panel .run-button {
+  position: relative;
+}
+
+.esri-view-width-less-than-small .esri-expand--auto .esri-widget.application-panel .run-button
+ {
+  width: auto;
+  position: fixed;
+  top: 1.023rem;
+  right: 1.023rem;
+}

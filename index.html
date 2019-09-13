@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="jumbotron jumbotron-fluid text-light" id="header">
+  <div class="jumbotron jumbotron-fluid text-light text-center" id="header">
     <div class="container">
       <h1>CCU 2019</h1>      
       <h4>API de ArcGIS para JavaScript</h4>
@@ -33,6 +33,9 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#scene">Escena 3D Agua Realista</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#geojson">Capa GeoJSON</a>
+        </li>
     </ul>
 
     <!-- Tab panes -->
@@ -41,18 +44,33 @@
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="timeslider-filter.html" allowfullscreen></iframe>
         </div>
-        <a class="btn btn-dark btn-sm m-3" href="timeslider-filter.html" target="_blank">Ambliar</a>
-        <h5>Filter features with TimeSlider</h5>
-        <p>This sample demonstrates how to filter temporal data in a GeoJSONLayer using a TimeSlider widget. This can be done by creating a new FeatureFilter and updating the filter's timeExtent property by watching the changes to the TimeSlider's timeExtent.</p>
+        <a class="btn btn-dark btn-sm m-3" href="timeslider-filter.html" target="_blank">Ampliar</a>
+        <h5>Filtro de entidades con control deslizante de tiempo</h5>
+        <p>
+          Este ejemplo demoestro como filtrar datos temporales en una capa GeoJSON usando un widget de control deslizante de tiempo. Esto peude hacerse creando un FeatureFilter y actualizando la propiedad timeExtend del filtro de acuerdo al timeExtend del TimeSlider.
+        </p>
       </div>
+
       <div id="scene" class="container tab-pane fade"><br>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="visualization-realistic-water.html" allowfullscreen></iframe>
         </div>
-        <a class="btn btn-dark btn-sm m-3" href="visualization-realistic-water.html" target="_blank">Ambliar</a>
-        <h5>Realistic water visualization in 3D</h5>
+        <a class="btn btn-dark btn-sm m-3" href="visualization-realistic-water.html" target="_blank">Ampliar</a>
+        <h5>Visualización realista de agua en 3D</h5>
         <p>
-          This sample shows how to visualize waterbody polygons with a realistic water surface using WaterSymbol3DLayer. To achieve a realistic look, the user can set various properties like the dominant color of the water, the strength of the wave, the direction of the waves or select the size of the water body.</p>
+          Este ememplo muestra como visualizar polígonos de cuerpos de agua con una superficie realista usando WaterSymbol3DLayer. Para lograr una apariencia realista, el usuario puede establecer varias apropiedades, como el color dominante del agua, la fuerza de la ola, la dirección de las olas o seleccionar el tamaño del cuerpo de agua. 
+        </p>
+      </div>
+
+      <div id="geojson" class="container tab-pane fade"><br>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="2019-devsummit/2_geojson.html" allowfullscreen></iframe>
+        </div>
+        <a class="btn btn-dark btn-sm m-3" href="2019-devsummit/2_geojson.html" target="_blank">Ampliar</a>
+        <h5>Capa GeoJson 3D</h5>
+        <p>
+           Este ejemplo muestra la GeoJSONLayer qye hace parte de la API de ArcGIS para JavaScript desde la versión 4.11. Específicamente, este ejemplo muestra algunas propiedades de la capa de entidades, como definitionExpression, elevationInfo y renderer.
+        </p>
       </div>
     </div>
   </div>
